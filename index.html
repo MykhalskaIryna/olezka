@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бокова панель та реєстрація</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            background-color: #800080; /* Фіолетовий фон */
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-left: 250px; /* This matches the width of the sidebar */
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .bold-italic {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#home">Головна</a>
+        <a href="#services">Послуги</a>
+        <a href="#clients">Клієнти</a>
+        <a href="#contact">Контакти</a>
+        <a href="#register">Реєстрація</a> <!-- Додано новий розділ реєстрації -->
+    </div>
+    <div class="content">
+        <h2>КРАСА І ДОГЛЯД</h2>
+        <p>Це область для основного контенту. Ви можете додати свій текст або елементи сюди.</p>
+        
+        <h2 id="services">Наші послуги</h2>
+        <ul>
+            <li><strong>Макіяж:</strong> Наші візажисти створять ідеальний образ для будь-якої події, враховуючи всі ваші побажання та тип шкіри.</li>
+            <li><strong>Манікюр та педикюр:</strong> Ми пропонуємо різні види манікюру та педикюру, включаючи класичний, гелевий та дизайн нігтів.</li>
+            <li><strong>Перукарські послуги:</strong> Наші стилісти підберуть для вас ідеальну зачіску та колір волосся, враховуючи ваш стиль і побажання.</li>
+            <li><strong>Догляд за шкірою:</strong> Пропонуємо широкий спектр послуг з догляду за шкірою обличчя та тіла, включаючи очищення, зволоження та анти-вікові процедури.</li>
+            <li><strong>Масаж:</strong> Розслаблюючий та лікувальний масаж для вашого тіла, який допоможе зняти напругу та втому.</li>
+        </ul>
+
+        <!-- Доданий розділ Реєстрації -->
+        <h2 id="register">Реєстрація</h2>
+        <form>
+            <label for="username">Ім'я користувача:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="email">Електронна пошта:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Зареєструватися">
+        </form>
+    </div>
+</body>
+</html>
