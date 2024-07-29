@@ -3,83 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бокова панель та реєстрація</title>
+    <title>Портфоліо Анни Токарук</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            display: flex;
-            background-color: #800080; /* Фіолетовий фон */
+            padding: 0;
+            background-color: #f0f8ff; /* голубий фон */
         }
-
-        .sidebar {
-            height: 100vh;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            padding-top: 20px;
-        }
-
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 18px;
+        header {
+            background-color: #4b0082; /* фіолетовий фон */
             color: white;
-            display: block;
+            padding: 10px 0;
+            text-align: center;
         }
-
-        .sidebar a:hover {
-            background-color: #575757;
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4682b4; /* голубий навігатор */
         }
-
+        nav a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #6a5acd; /* темно-фіолетовий при наведенні */
+        }
         .content {
-            margin-left: 250px; /* This matches the width of the sidebar */
             padding: 20px;
-            flex-grow: 1;
         }
-
-        .bold-italic {
-            font-weight: bold;
-            font-style: italic;
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <a href="#home">Головна</a>
-        <a href="#services">Послуги</a>
-        <a href="#clients">Клієнти</a>
-        <a href="#contact">Контакти</a>
-        <a href="#register">Реєстрація</a> <!-- Додано новий розділ реєстрації -->
-    </div>
-    <div class="content">
-        <h2>КРАСА І ДОГЛЯД</h2>
-        <p>Це область для основного контенту. Ви можете додати свій текст або елементи сюди.</p>
-        
-        <h2 id="services">Наші послуги</h2>
-        <ul>
-            <li><strong>Макіяж:</strong> Наші візажисти створять ідеальний образ для будь-якої події, враховуючи всі ваші побажання та тип шкіри.</li>
-            <li><strong>Манікюр та педикюр:</strong> Ми пропонуємо різні види манікюру та педикюру, включаючи класичний, гелевий та дизайн нігтів.</li>
-            <li><strong>Перукарські послуги:</strong> Наші стилісти підберуть для вас ідеальну зачіску та колір волосся, враховуючи ваш стиль і побажання.</li>
-            <li><strong>Догляд за шкірою:</strong> Пропонуємо широкий спектр послуг з догляду за шкірою обличчя та тіла, включаючи очищення, зволоження та анти-вікові процедури.</li>
-            <li><strong>Масаж:</strong> Розслаблюючий та лікувальний масаж для вашого тіла, який допоможе зняти напругу та втому.</li>
-        </ul>
 
-        <!-- Доданий розділ Реєстрації -->
-        <h2 id="register">Реєстрація</h2>
-        <form>
-            <label for="username">Ім'я користувача:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <label for="email">Електронна пошта:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="password">Пароль:</label><br>
-            <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="Зареєструватися">
-        </form>
+<header>
+    <h1>Портфоліо Анни Токарук</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="openTab('portfolio')">Портфоліо</a>
+    <a href="#" onclick="openTab('contacts')">Контакти</a>
+    <a href="#" onclick="openTab('works')">Роботи</a>
+</nav>
+
+<div class="content">
+    <div id="portfolio" class="tab-content active">
+        <h2>Портфоліо</h2>
+        <p>Тут буде розміщено ваше портфоліо...</p>
     </div>
+    <div id="contacts" class="tab-content">
+        <h2>Контакти</h2>
+        <p>Ви можете зв'язатися зі мною за такими контактами:</p>
+        <ul>
+            <li><a href="https://freelancehunt.com/freelancer/Mykhalska8350.html" target="_blank">Мій профіль на Freelancehunt</a></li>
+            <li>Email: annatokaruk2@gmail.com</li>
+        </ul>
+    </div>
+    <div id="works" class="tab-content">
+        <h2>Роботи</h2>
+        <p>Тут будуть розміщені ваші виконані роботи...</p>
+    </div>
+</div>
+
+<script>
+    function openTab(tabName) {
+        var i;
+        var x = document.getElementsByClassName("tab-content");
+        for (i = 0; i < x.length; i++) {
+            x[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+    }
+</script>
+
 </body>
 </html>
-
-
