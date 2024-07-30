@@ -40,6 +40,9 @@
         .tab-content.active {
             display: block;
         }
+        .portfolio-item {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +61,16 @@
 <div class="content">
     <div id="portfolio" class="tab-content active">
         <h2>Портфоліо</h2>
-        <p>Тут буде розміщено ваше портфоліо...</p>
+        <div class="portfolio-item">
+            <a href="files/your-work1.docx" download>Завантажити роботу 1 (Word)</a>
+        </div>
+        <div class="portfolio-item">
+            <a href="files/your-work2.pdf" download>Завантажити роботу 2 (PDF)</a>
+        </div>
+        <div class="portfolio-item">
+            <a href="files/your-image1.jpg" download>Завантажити роботу 3 (Зображення)</a>
+            <img src="files/your-image1.jpg" alt="Робота 3" style="max-width: 100%; height: auto;">
+        </div>
     </div>
     <div id="services" class="tab-content">
         <h2>Послуги</h2>
